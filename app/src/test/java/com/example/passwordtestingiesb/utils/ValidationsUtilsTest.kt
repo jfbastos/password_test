@@ -19,5 +19,18 @@ class ValidationsUtilsTest {
 
     }
 
+    @Test
+    fun `Validar fun isContainsSpecialCharacter funciona corretamente`() {
+
+
+        val stringWithSpecialCharacter = "teste!"
+        val stringWithoutSpecialCharacter = "teste"
+
+
+        assertThat(ValidationsUtils.isContainSpecialCharacter(stringWithSpecialCharacter)).isTrue()
+        assertThat(ValidationsUtils.isContainSpecialCharacter(stringWithoutSpecialCharacter)).isFalse()
+
+    }
+
 
 }
